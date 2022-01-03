@@ -19,8 +19,8 @@ const initialState = {
   cartOpen: false,
 };
 
-// should this const be reducers and not reducer?
-export const reducer = (state = initialState, action) => {
+// should this const be reducers
+export const reducers = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -94,8 +94,8 @@ export const reducer = (state = initialState, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState);
-}
+// export function useProductReducer(initialState) {
+//   return useReducer(reducer, initialState);
+// }
 
-export default reducer;
+export default reducers;
