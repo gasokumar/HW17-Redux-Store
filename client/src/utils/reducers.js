@@ -19,6 +19,7 @@ const initialState = {
   cartOpen: false,
 };
 
+// should this const be reducers and not reducer?
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
