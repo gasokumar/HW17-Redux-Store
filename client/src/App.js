@@ -1,11 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import {
+//   ApolloClient,
+//   createHttpLink,
+//   InMemoryCache,
+//   ApolloProvider,
+// } from "@apollo/client";
+// import { ApolloProvider } from "@apollo/react-hooks";
+// import { ApolloClient } from "apollo-boost";
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloProvider,
+  InMemoryCache,
   createHttpLink,
 } from "@apollo/client";
+// InMemoryCache, createHttpLink, from above
+import { Provider } from "react-redux";
+import store from "./utils/store";
+
 import { setContext } from "@apollo/client/link/context";
 
 import Home from "./pages/Home";
@@ -17,9 +29,6 @@ import Nav from "./components/Nav";
 // import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-
-import { Provider } from "react-redux";
-import store from "./utils/store";
 
 const httpLink = createHttpLink({
   uri: "/graphql",

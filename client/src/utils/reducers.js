@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+// import { useReducer } from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -20,7 +20,7 @@ const initialState = {
 };
 
 // should this const be reducers
-export const reducers = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -98,4 +98,4 @@ export const reducers = (state = initialState, action) => {
 //   return useReducer(reducer, initialState);
 // }
 
-export default reducers;
+export default reducer;
